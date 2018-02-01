@@ -14,7 +14,7 @@ var promise = mongoose.connect("mongodb://admin:admin@ds121268.mlab.com:21268/im
     , {
     useMongoClient: true});
 app.use(bodyparser.urlencoded({extended:true}));
-var port=3000 || process.env.PORT;
+var port=process.env.PORT;
 app.use(express.static(__dirname+"/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
