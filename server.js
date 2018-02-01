@@ -10,7 +10,8 @@ var methodOverride =require('method-override');
 var flash          =require('connect-flash');
 var app=express();
 
-var promise = mongoose.connect(process.env.DATABASEURL, {
+var promise = mongoose.connect("mongodb://admin:admin@ds121268.mlab.com:21268/impra"
+    , {
     useMongoClient: true});
 app.use(bodyparser.urlencoded({extended:true}));
 var port=3000 || process.env.PORT;
