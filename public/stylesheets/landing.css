@@ -19,10 +19,10 @@ h1 {
     color: #fff;
 }
 body{
-    background-image: url("/wall.jpg");
+    background-image: url("/wallmobile.jpg");
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     body{
-        background-image: url("/wallmobile.jpg");
+        background-image: url("/wall.jpg");
     }
 }
