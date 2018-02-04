@@ -285,6 +285,7 @@ app.post("/campground/:id/heartlike",isLoggedIn,function(req,res){
     Campground.findById(req.params.id,function(err,campground){
         if(err){
             console.log(err);
+            res.redirect("/campground");
         }
         else{
            campground.likecount+=1;
@@ -306,6 +307,7 @@ app.post("/campground/:id/heartdislike",isLoggedIn,function(req,res){
    Campground.findById(req.params.id,function(err,campground){
        if(err){
            console.log(err);
+           res.redirect("/campground");
        }
        else{
            var id=req.user._id;

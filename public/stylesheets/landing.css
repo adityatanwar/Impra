@@ -9,20 +9,13 @@ h1 {
 }
 
 #landing-header {
-    z-index: 1;
-    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%, 0);
+    position: absolute;
     text-align: center;
-    padding-top: 40vh;
 }
 
 #landing-header h1 {
     color: #fff;
-}
-body{
-    background-image: url("/wallmobile.jpg");
-}
-@media only screen and (min-width: 768px) {
-    body{
-        background-image: url("/wall.jpg");
-    }
 }

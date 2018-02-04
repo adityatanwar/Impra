@@ -13,7 +13,7 @@
             font-size: 101%;
             background-size: cover;
             background-color: white;
-
+            text-align: center;
         }
         .custom{
             height: 20em;
@@ -67,14 +67,14 @@
 <!--**************-->
 
 <div class="container-fluid main">
-    <div class="row" style="display:flex;flex-wrap:wrap;margin-top: 5em;">
+    <div class="row" style="margin-top: 5em;">
         <% for(var i=0;i<campground.length;i++){ %>
-        <div class="col-md-3 col-sm-12 col-xs-12">
-            <div class="card border border-success" style="height: 33em;width: 26em;box-shadow: -0.2em 0.5em 4em black;margin-bottom: 2em;">
+        <div class="col-12 col-md-3 col-sm-6">
+            <div class="card border border-success" style="height: 33em;box-shadow: -0.2em 0.5em 2em black;margin-bottom: 2em;">
                 <div class="card-body">
                     <h1 class="card-title"><%=campground[i].name%></h1>
-                    <p class="card-text" style="font-size: large"><%=campground[i].description.substring(0,400)%> ...</p>
-                    <a href="/campground/<%=campground[i]._id%>" class="btn btn-info">Read More</a>
+                    <p class="card-text" style="font-size: large"><%=campground[i].description.substring(0,350)%> ...</p>
+                    <a href="/campground/<%=campground[i]._id%>" class="btn btn-outline-info">Read More</a>
                 </div>
             </div>
         </div>
