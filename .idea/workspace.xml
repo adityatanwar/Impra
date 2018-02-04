@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="598f6b8e-614a-4cd3-a31a-70799af2ff1c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campground/campground.ejs" afterPath="$PROJECT_DIR$/views/campground/campground.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campground/edit.ejs" afterPath="$PROJECT_DIR$/views/campground/edit.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campground/landing.ejs" afterPath="$PROJECT_DIR$/views/campground/landing.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campground/new.ejs" afterPath="$PROJECT_DIR$/views/campground/new.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/campground/show.ejs" afterPath="$PROJECT_DIR$/views/campground/show.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/users/login.ejs" afterPath="$PROJECT_DIR$/views/users/login.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/users/register.ejs" afterPath="$PROJECT_DIR$/views/users/register.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="new.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/campground/new.ejs">
+      <file leaf-file-name="show.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/campground/show.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="54">
+              <caret line="3" column="105" lean-forward="false" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -32,59 +38,6 @@
             <state relative-caret-position="558">
               <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landing.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/campground/landing.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="66" column="52" lean-forward="false" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/users/login.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="66" column="31" lean-forward="false" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/users/register.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/campground/edit.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="campground.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/campground/campground.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -111,15 +64,15 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/partials/navbar.ejs" />
         <option value="$PROJECT_DIR$/../yelpcamp/trial.html" />
-        <option value="$PROJECT_DIR$/views/users/login.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/landing.css" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/views/campground/landing.ejs" />
+        <option value="$PROJECT_DIR$/views/campground/campground.ejs" />
         <option value="$PROJECT_DIR$/views/users/register.ejs" />
+        <option value="$PROJECT_DIR$/views/users/login.ejs" />
         <option value="$PROJECT_DIR$/views/campground/edit.ejs" />
         <option value="$PROJECT_DIR$/views/campground/new.ejs" />
-        <option value="$PROJECT_DIR$/public/stylesheets/landing.css" />
-        <option value="$PROJECT_DIR$/views/campground/landing.ejs" />
         <option value="$PROJECT_DIR$/views/campground/show.ejs" />
-        <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/views/campground/campground.ejs" />
       </list>
     </option>
   </component>
@@ -250,12 +203,12 @@
       <workItem from="1517574807425" duration="1801000" />
       <workItem from="1517671464409" duration="2464000" />
       <workItem from="1517674143883" duration="4104000" />
-      <workItem from="1517732632821" duration="12268000" />
+      <workItem from="1517732632821" duration="12918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31494000" />
+    <option name="totallyTimeSpent" value="32144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="282" y="68" width="1922" height="1092" extended-state="6" />
@@ -621,35 +574,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/campground/show.ejs">
+    <entry file="file://$PROJECT_DIR$/views/users/register.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="77" column="37" lean-forward="false" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
+        <state relative-caret-position="54">
+          <caret line="3" column="105" lean-forward="false" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/register.ejs">
+    <entry file="file://$PROJECT_DIR$/views/users/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+        <state relative-caret-position="54">
+          <caret line="3" column="105" lean-forward="false" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/campground/landing.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="66" column="52" lean-forward="false" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+        <state relative-caret-position="18">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/campground/edit.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        <state relative-caret-position="54">
+          <caret line="3" column="105" lean-forward="false" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/campground/campground.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -663,28 +627,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/campground/new.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        <state relative-caret-position="54">
+          <caret line="3" column="105" lean-forward="false" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/users/login.ejs">
+    <entry file="file://$PROJECT_DIR$/views/campground/show.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="66" column="31" lean-forward="false" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+        <state relative-caret-position="54">
+          <caret line="3" column="105" lean-forward="false" selection-start-line="3" selection-start-column="105" selection-end-line="3" selection-end-column="105" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/campground/campground.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
