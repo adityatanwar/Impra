@@ -1,10 +1,16 @@
 var mongoose=require('mongoose');
 var promise = mongoose.connect('mongodb://localhost/projectfinal', {
     useMongoClient: true});
-var commentSchema=new mongoose.Schema({
+var replySchema=new mongoose.Schema({
     text:String,
     author:String,
     authorid:String
+});
+var commentSchema=new mongoose.Schema({
+    text:String,
+    author:String,
+    authorid:String,
+    replies:[replySchema]
 });
 var campgroundschema=new mongoose.Schema({
     name:String,

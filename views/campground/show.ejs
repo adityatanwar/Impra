@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Impra</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,17 +50,62 @@
             .newmobile{
                 display:inline-block;
             }
+            .buttonplacement{
+                margin-top: 0.4em;
+            }
         }
         @media only screen and (min-width: 768px) {
             .newdesktop{
                 display:inline-block;
             }
+            .buttonplacement{
+                margin-top: 1em;
+            }
+        }
+        .replybox{
+            display: none;
         }
     </style>
 </head>
 <body>
-<% include ../partials/navbar.ejs %>
-
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #3a8efc;">
+    <a class="navbar-brand" href="/campground">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        Impra
+    </a>
+    <ul class="navbar-nav">
+        <li class="nav-item newdesktop">
+            <a class="nav-link" href="/campground/new">Add Impro</a>
+        </li>
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-md-auto">
+            <% if(currentUser == undefined){ %>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Signup</a>
+            </li>
+            <%}%>
+            <% if(currentUser != undefined){ %>
+            <li class="nav-item">
+                <span class="navbar-text" style="margin-right: 0.4em;font-family:'Dancing Script', cursive ;font-size: 1.2em;position:relative;bottom: 0.2em;">Signed in as <%=currentUser.username%></span>
+            </li>
+            <li class=”nav-item”>
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            <%}%>
+            <li class="nav-item newmobile">
+                <a class="nav-link" href="/campground/new">Add Impro</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--Navbar till now,insert code after this line-->
 <div class="container-fluid" style="margin-top: 5em;">
     <% if(success && success.length>0){ %>
     <div class="alert alert-success" role="alert" style="text-align: center">
@@ -75,7 +121,7 @@
 <!--**************-->
 <div class="container">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12">
+        <div class="col-md-12">
             <div class="jumbotron">
                 <div>
                     <h1 style="text-align: center;"><%=foundcampground.name%></h1>
@@ -88,15 +134,15 @@
                     </span>
                     <% } %>
                     <% if(currentUser==undefined){%>
-                      <a href="/login" class="pull-right" id="nouserheart">
-                          <i class="fa fa-heart-o" aria-hidden="true"></i>
-                      </a>
+                    <a href="/login" class="pull-right" id="nouserheart">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </a>
                     <% } %>
                     <% if(flag==true){ %>
-                      <span class="pull-right" style="font-size: x-large;color: red;" id="filledheart">
+                    <span class="pull-right" style="font-size: x-large;color: red;" id="filledheart">
                         <i class="fa fa-heart" aria-hidden="true"></i>
                       </span>
-                      <span class="pull-right" style="font-size: x-large;display: none;" id="heart">
+                    <span class="pull-right" style="font-size: x-large;display: none;" id="heart">
                         <i class="fa fa-heart-o" aria-hidden="true"></i>
                       </span>
                     <% } %>
@@ -106,7 +152,7 @@
                     <div class="hearttext" id="hearttext"></div> <!--this is the heartext div-->
                     <hr>
                     <p id="content"></p> <!--description-->
-                    <% if(currentUser !=undefined && currentUser._id == foundcampground.author.id){%>
+                    <% if(currentUser !=undefined && (currentUser._id == foundcampground.author.id || currentUser.username == "admin")){%>
                     <span class="pull-right">
                         <form action="/campground/<%=foundcampground._id%>?_method=delete" method="post">
                          <button class="btn btn-outline-danger btn-sm">Delete</button>
@@ -122,21 +168,41 @@
                 <%for(var i=0;i<foundcampground.comments.length;i++){%>
                 <div class="row" style="margin-top:1em;">
                     <div class="col-md-12">
-                        <strong><%=foundcampground.comments[i].author%></strong>
-                        <p>
-                            <%=foundcampground.comments[i].text%>
-                        </p>
+                        <div>
+                            <strong><%=foundcampground.comments[i].author%></strong>
+                            <% if(foundcampground.comments[i].author==foundcampground.author.username){%>
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <%}%>
+                        </div>
+                        <p style="display: inline-block"><%=foundcampground.comments[i].text%></p>
+                        <p style="margin-right: 0.3em;color: grey;float: right" class="reply">Reply</p>
+                        <div style="padding-left: 2em;padding-right: 2em;">
+                            <%for(var j=0;j<foundcampground.comments[i].replies.length;j++){%>
+                            <div>
+                                <strong style="font-size: 85%"><%=foundcampground.comments[i].replies[j].author%></strong>
+                                <% if(foundcampground.comments[i].author==foundcampground.author.username){%>
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                <%}%>
+                            </div>
+                            <p style="display: inline-block"><%=foundcampground.comments[i].replies[j].text%></p>
+                            <%}%>
+                        </div>
+                        <div id="replybox" class="replybox" style="padding-left: 2em;padding-right: 2em;">
+                            <form action="/campground/<%=foundcampground._id%>/comments/<%=foundcampground.comments[i]._id%>/<%=i%>" method="post">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="reply[text]" placeholder="Add your reply here..">
+                                    <button style="float: right;margin-bottom: 1em;" class="btn btn-secondary btn-sm buttonplacement">Add Reply</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
+                <hr/>
                 <%}%>
                 <form action="/campground/<%=foundcampground._id%>/comments" method="post">
                     <div class="form-group">
                         <input class="form-control" type="text" name="comment[text]" placeholder="Add your comment here..">
-                    </div>
-                    <div class="form-group">
-                        <div style="float: right">
-                            <button class="btn btn-success btn-sm">Add new comment</button>
-                        </div>
+                        <button style="float: right;" class="btn btn-success btn-sm buttonplacement">Add new comment</button>
                     </div>
                 </form>
             </div>
@@ -152,5 +218,6 @@
         crossorigin="anonymous"></script>
 <script src="/scripts/heart.js"></script>
 <script src="/scripts/description.js"></script>
+<script src="/scripts/reply.js"></script>
 </body>
 </html>

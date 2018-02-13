@@ -6,11 +6,5 @@ var replySchema=new mongoose.Schema({
     author:String,
     authorid:String
 });
-var commentSchema=new mongoose.Schema({
-    text:String,
-    author:String,
-    authorid:String,
-    replies:[replySchema]
-});
-var Comment=mongoose.model('Comment',commentSchema);
-module.exports=Comment;
+var Reply=mongoose.model('Reply',replySchema);
+module.exports=Reply;
